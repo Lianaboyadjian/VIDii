@@ -28,7 +28,7 @@ Mijn startniveau is: Blauw.
   <summary>De eerste versie/schets van je ontwerp & je persoonlijke uitdaging</summary>
 
   ### De eerste versie/schets:
-  <img src="readme-images/ontwerpschets.png" width="375px" alt="eerste versie/schets">
+  <img src="./readme-images/ontwerpschets.png" width="375px" alt="eerste versie/schets">
 
 
   ### Je ambitie:
