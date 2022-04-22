@@ -1,5 +1,5 @@
 # Procesverslag
-Markdown is een simpele manier om HTML te schrijven.  
+Markdown is een simpele manier om HTML te schrijven.
 Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal prima. Het gaat om de inhoud van je procesverslag. Besteedt de tijd voor pracht en praal aan je website.
@@ -13,10 +13,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 ## Jij
 
 ### Ontwerper:
-Sanne 't Hooft (vervangen door jouw naam)
+Liana Boyadjian
 
 #### Je startniveau:
-Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
+Mijn startniveau is: Blauw.
 
 
 
@@ -28,16 +28,16 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
   <summary>De eerste versie/schets van je ontwerp & je persoonlijke uitdaging</summary>
 
   ### De eerste versie/schets:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="eerste versie/schets">
+  <img src="readme-images/ontwerpschets.pdf" width="375px" alt="eerste versie/schets">
 
 
-  ### Je ambitie: 
+  ### Je ambitie:
   Aan deze technieken/punten wil ik werken:
-  - punt 1
+  -
   - punt 2
   - nog een punt
   - ...
- 
+
 </details>
 
 
@@ -76,7 +76,7 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
 
 <details>
   <summary>Mijn bevindingen + wijzigingen (minimaal 5)</summary>
-  
+
   ### Bevinding 1:
   Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
 
@@ -104,7 +104,7 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
 
 <details>
   <summary>Mijn bevindingen + wijzigingen (minimaal 5)</summary>
-  
+
   ### Bevinding 1:
   Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
 
@@ -138,7 +138,7 @@ Mijn startniveau is: hier je startniveau (kies uit zwart, rood óf blauw)
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="final ontwerp">
 
 
-  ### Dit ging goed/Heb ik geleerd: 
+  ### Dit ging goed/Heb ik geleerd:
   Korte omschrijving met plaatje(s)
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
