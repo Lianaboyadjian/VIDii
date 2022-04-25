@@ -1,19 +1,174 @@
 /* CSS Document */
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
 }
 
-html, body {
-  height:100%;
-  margin:0;
+html,
+body {
+    /*    height: 100%;*/
+    margin: 0;
+    overflow: hidden;
 }
 
 button:not([disabled]) {
-  cursor:pointer;
+    cursor: pointer;
 }
 
 /* jouw CSS vanaf hier */
 
-h1 {
-  color:crimson;
+
+.gameboy {
+    position: relative;
+    background-color: #cfcfcf;
+    height: 100vh;
+    width: 100vw;
+    border-radius: 4em 4em 8em 4em / 4em 4em 5em 4em;
+    box-shadow:
+        inset -.25em -.25em .25em rgb(102 102 102),
+        inset 12px 18px 18px -11px #FFFFFF;
+    display: flow-root;
+}
+
+.omlijning {
+    background-color: #979a9c;
+    height: 30em;
+    width: 90%;
+    max-width: 50em;
+    margin: 2em auto;
+    border-radius: 1em 1em 8em 1em / 1em 1em 5em 1em;
+}
+
+.scherm {
+    background-color: #89822a;
+    height: 23em;
+    width: 60%;
+    max-width: 25em;
+    margin: 2em auto;
+}
+
+ul {
+    background-color: none;
+    margin: 0;
+    padding: 0;
+    /*overflow-x en y specificeert of de inhoud wordt geknipt, scrollbalk wordt toegevoegd etc.*/
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* whitespace specificeert hoe tekst wordt behandeld op het element waar het op wordt toegepast. Nowrap voorkomt dat de tekst wordt 'gewrapt'*/
+    white-space: nowrap;
+    /* list-style none is geen bulletpoints of numbers*/
+    list-style: none;
+}
+
+ul li {
+    /* display inline-block staat toe dat je een hoogte en breedte kan geven aan het element. Het element kan ook naast andere elementen staan, het verschil met display block*/
+    display: inline-block;
+    width: 18em;
+    background-color: none;
+}
+
+ul li img {
+    max-width: 100%;
+}
+
+ul li h3 {
+    color: #000000;
+    font-size: 0.75em;
+    letter-spacing: 0.07em;
+    margin-top: 1.25em;
+    text-align: center;
+    font-weight: 800;
+}
+
+ul li p {
+    color: #000000;
+    font-size: 0.87em;
+    letter-spacing: 0.06em;
+    margin-top: 0.93em;
+    text-align: center;
+    font-weight: 300;
+}
+
+.gameboy h1 {
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    color: #0a3f94;
+    font-size: 1em;
+}
+
+.gameboy h2 {
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+    color: #0a3f94;
+    font-size: 1.5em;
+}
+
+.pijltjes {
+    margin: auto;
+    background: none;
+    height: 100px;
+    position: relative;
+    width: 100px;
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+}
+
+.pijltjes::after {
+    background: #242424;
+    content: "";
+    height: 30px;
+    left: 0;
+    position: absolute;
+    top: 35px;
+    width: 100px;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    box-shadow:
+        inset -8px -9px 11px -4px rgba(0, 0, 0, 0.41),
+        inset 5px 3px 4px -5px #FFFFFF;
+    opacity: 98%;
+}
+
+.pijltjes::before {
+    background: #242424;
+    content: "";
+    height: 100px;
+    left: 35px;
+    position: absolute;
+    top: 0;
+    width: 30px;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    box-shadow:
+        inset -8px -9px 11px -4px rgba(0, 0, 0, 0.41),
+        inset -2px 6px 4px -5px #FFFFFF;
+    opacity: 90%;
+}
+
+.pijltjes button {
+    position: relative;
+    z-index: 100;
+    background: none;
+    border-style: none;
+}
+
+#pijltje-boven {
+    grid-column-start: 2;
+
+}
+
+#pijltje-rechts {
+    grid-row-start: 2;
+    grid-column-start: 3;
+}
+
+#pijltje-onder {
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+#pijltje-links {
+    grid-row-start: 2;
+    grid-column-start: 1;
 }
