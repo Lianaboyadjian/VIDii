@@ -21,13 +21,12 @@ button:not([disabled]) {
 
 .gameboy {
     position: relative;
-    background-color: #cfcfcf;
+    background-color: #ededed;
     height: 100vh;
     width: 100vw;
     border-radius: 4em 4em 8em 4em / 4em 4em 5em 4em;
     box-shadow:
-        inset -.25em -.25em .25em rgb(102 102 102),
-        inset 12px 18px 18px -11px #FFFFFF;
+        inset -.25em -.25em .25em rgb(102 102 102);
     display: flow-root;
 }
 
@@ -37,6 +36,7 @@ button:not([disabled]) {
     width: 90%;
     max-width: 50em;
     margin: 2em auto;
+    margin-bottom: 0;
     border-radius: 1em 1em 8em 1em / 1em 1em 5em 1em;
 }
 
@@ -68,13 +68,21 @@ ul li {
     background-color: none;
 }
 
+
+
+ul li p {
+    font-family: 'Press Start 2P', cursive;
+}
+
 ul li img {
     max-width: 100%;
+    padding-top: 1em;
 }
 
 ul li h3 {
-    color: #000000;
-    font-size: 0.75em;
+    font-family: 'Press Start 2P', cursive;
+    color: #48524a;
+    font-size: 0.5em;
     letter-spacing: 0.07em;
     margin-top: 1.25em;
     text-align: center;
@@ -82,30 +90,105 @@ ul li h3 {
 }
 
 ul li p {
-    color: #000000;
-    font-size: 0.87em;
+    font-family: 'Press Start 2P', cursive;
+    color: #48524a;
+    font-size: 0.3em;
     letter-spacing: 0.06em;
     margin-top: 0.93em;
+    margin-bottom: 1em;
     text-align: center;
     font-weight: 300;
 }
 
-.gameboy h1 {
+.gameboy h2 {
     font-family: 'Poppins', sans-serif;
-    display: inline-block;
     color: #0a3f94;
     font-size: 1em;
+    width: 90%;
+    max-width: 50em;
+    margin: 0 auto;
+
 }
 
-.gameboy h2 {
+.gameboy h2 span {
     font-family: 'Open Sans', sans-serif;
     display: inline-block;
     color: #0a3f94;
     font-size: 1.5em;
 }
 
+.button-wrapper {
+    width: 90%;
+    max-width: 50em;
+    margin: 0 auto;
+    margin-top: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.button-wrapper > section:nth-of-type(2) {
+    background-color: #d1d1d1;
+    height: 60px;
+    width: 120px;
+    transform: rotate(330deg);
+    border-radius: 40px;
+    text-align: center;
+}
+
+.button-wrapper > section:nth-of-type(2) button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #aa3866;
+    border-style: none;
+    margin: 0.34em auto;
+    /*    box-shadow: 5px 6px 2px -3px rgba(109,109,109,0.58);*/
+}
+
+.button-wrapper p {
+    font-family: 'Poppins', sans-serif;
+    color: #0a3f94;
+    font-size: 1em;
+    margin-top: 4.2em;
+}
+
+
+.button-wrapper button:hover {
+    box-shadow: inset -8px -9px 11px -4px rgba(0, 0, 0, 0.41);
+    border-radius: 50%;
+}
+
+.button-wrapper button:active {
+    box-shadow: inset 20px 23px 14px -5px rgba(0, 0, 0, 0.55);
+    border-radius: 50%;
+}
+
+
+.button-wrapper > section:nth-of-type(3) {
+    background-color: none;
+    width: 100%;
+    text-align: center;
+}
+
+.button-wrapper > section:nth-of-type(3) button {
+    height: 15px;
+    width: 50px;
+    border-radius: 30px;
+    background-color: #b3b3b3;
+    border-style: none;
+}
+
+
+
+
+/*
+.button-wrapper > section:not(:nth-of-type(3)) {
+    flex: 1;
+}
+*/
+
 .pijltjes {
-    margin: auto;
     background: none;
     height: 100px;
     position: relative;
@@ -116,7 +199,7 @@ ul li p {
 }
 
 .pijltjes::after {
-    background: #242424;
+    background: #474747;
     content: "";
     height: 30px;
     left: 0;
@@ -125,14 +208,18 @@ ul li p {
     width: 100px;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
-    box-shadow:
+    /*
         inset -8px -9px 11px -4px rgba(0, 0, 0, 0.41),
         inset 5px 3px 4px -5px #FFFFFF;
+*/
     opacity: 98%;
 }
 
+
+
+
 .pijltjes::before {
-    background: #242424;
+    background: #474747;
     content: "";
     height: 100px;
     left: 35px;
@@ -141,16 +228,30 @@ ul li p {
     width: 30px;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
     box-shadow:
+        /*
         inset -8px -9px 11px -4px rgba(0, 0, 0, 0.41),
         inset -2px 6px 4px -5px #FFFFFF;
-    opacity: 90%;
+*/
+        opacity: 90%;
 }
+
+
 
 .pijltjes button {
     position: relative;
     z-index: 100;
     background: none;
     border-style: none;
+}
+
+.pijltjes button:hover {
+    box-shadow: inset -8px -9px 11px -4px rgba(0, 0, 0, 0.41);
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.pijltjes button:active {
+    box-shadow: inset 20px 23px 25px -4px rgba(0, 0, 0, 0.46);
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
 }
 
 #pijltje-boven {
