@@ -48,86 +48,40 @@ button:not([disabled]) {
     margin: 2em auto;
 }
 
-ul {
-    background-color: none;
-    margin: 0;
-    padding: 0;
-    /*overflow-x en y specificeert of de inhoud wordt geknipt, scrollbalk wordt toegevoegd etc.*/
-    overflow-x: scroll;
-    overflow-y: hidden;
-    /* whitespace specificeert hoe tekst wordt behandeld op het element waar het op wordt toegepast. Nowrap voorkomt dat de tekst wordt 'gewrapt'*/
-    white-space: nowrap;
-    /* list-style none is geen bulletpoints of numbers*/
-    list-style: none;
-}
-
-ul li {
-    /* display inline-block staat toe dat je een hoogte en breedte kan geven aan het element. Het element kan ook naast andere elementen staan, het verschil met display block*/
-    display: inline-block;
-    width: 18em;
-    background-color: none;
-}
-
-ul li p {
-    font-family: 'Press Start 2P', cursive;
-}
-
-ul li img {
-    max-width: 100%;
-    padding-top: 1em;
-}
-
-
-@keyframes bounce {
-
-    0%,
-    100%,
-    20%,
-    50%,
-    80% {
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0)
-    }
-
-    40% {
-        -webkit-transform: translateY(-30px);
-        -ms-transform: translateY(-30px);
-        transform: translateY(-30px)
-    }
-
-    60% {
-        -webkit-transform: translateY(-15px);
-        -ms-transform: translateY(-15px);
-        transform: translateY(-15px)
-    }
-}
-
-ul li img:hover {
-    animation-name: bounce;
-    -moz-animation-name: bounce;
-    cursor: pointer;
-    animation-duration: 1s;
-}
-
-
-ul li h3 {
+.scherm a {
     font-family: 'Press Start 2P', cursive;
     color: #48524a;
-    font-size: 0.5em;
+    font-size: 0.4em;
     letter-spacing: 0.07em;
-    margin-top: 1.25em;
+    padding-left: 2em;
+    text-decoration: none;
+}
+
+.scherm a:hover {
+    background-color: #48524a;
+    color: #89822a;
+}
+
+
+.scherm h3 {
+    font-family: 'Press Start 2P', cursive;
+    color: #48524a;
+    font-size: 1em;
+    letter-spacing: 0.07em;
+    padding-top: 2em;
+    padding-bottom: 1em;
     text-align: center;
     font-weight: 800;
 }
 
-ul li p {
+.scherm p {
     font-family: 'Press Start 2P', cursive;
     color: #48524a;
-    font-size: 0.3em;
+    font-size: 0.6em;
     letter-spacing: 0.06em;
-    margin-top: 0.93em;
-    margin-bottom: 1em;
+    line-height: 1.5em;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
     text-align: center;
     font-weight: 300;
 }
@@ -139,7 +93,6 @@ ul li p {
     width: 90%;
     max-width: 50em;
     margin: 0 auto;
-
 }
 
 .gameboy h2 span {
@@ -183,10 +136,6 @@ ul li p {
     color: #0a3f94;
     font-size: 1em;
     margin-top: 4.2em;
-}
-
-a {
-    text-decoration: none;
 }
 
 
