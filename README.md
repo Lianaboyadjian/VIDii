@@ -231,4 +231,6 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 11. https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
 ^ meer uitleg over keyframes
 
+12. https://nl.wikipedia.org/wiki/Game_Boy
+^ Wikipedia voor de info over de verschillende gameboys.
 </details>
