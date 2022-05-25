@@ -233,4 +233,14 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
 12. https://nl.wikipedia.org/wiki/Game_Boy
 ^ Wikipedia voor de info over de verschillende gameboys.
+
+13. https://www.w3schools.com/tags/ref_pxtoemconversion.asp
+^ pixels naar em om alle px weg te halen
+
+14. https://www.w3schools.com/css/css_border.asp
+^ css border opties bekijken voor de select en start buttons
+
+15. https://codepen.io/shooft/pen/dydZYRB
+^ opzet javascript geel maken van Sanne
+
 </details>
