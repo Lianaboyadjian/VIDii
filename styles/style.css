@@ -12,40 +12,145 @@ body {
     overflow: hidden;
 }
 
+:root {
+/*    GAMEBOY LAYOUT*/
+    --color-gb-background: #ededed;
+    --color-gb-omlijning: #979a9c;
+    --color-nintendotext: #0a3f94;
+    --color-nintendotext: #0a3f94;
+
+/*    BUTTONS*/
+    --color-pijltjesbuttons: #474747;
+    --color-ab-button: #aa3866;
+    --color-ab-buttontext: #0a3f94;
+    --color-background-ab-button: #d1d1d1;
+    --color-select-start-button: #b3b3b3;
+    --color-ss-border: #d6d6d4;
+    --color-ss-buttontext: #0a3f94;
+    --button-padding: 0;
+    --button-border: none;
+    --button-background: none;
+    --font-gb-buttons: 'Poppins', sans-serif;
+
+/*    SCHERM*/
+    --color-gb-schermtekst: #48524a;
+    --font-gb-schermtekst: 'Press Start 2P', cursive;
+    --color-background-scherm: #89822a;
+
+
+}
+
+:root.is-geel {
+/*    GAMEBOY LAYOUT*/
+    --color-gb-background: #e8d907;
+    --color-gb-omlijning: #000000;
+    --color-nintendotext: #000000;
+    --color-gameboytmtext: #000000;
+
+/*    BUTTONS*/
+    --color-pijltjesbuttons: #000000;
+    --color-ab-button: #000000;
+    --color-ab-buttontext: #000000;
+    --color-background-ab-button: #c9bc06;
+    --color-select-start-button: #000000;
+    --color-ss-border: #b5a904;
+    --color-ss-buttontext: #000000;
+}
+
 button:not([disabled]) {
     cursor: pointer;
 }
 
-/* jouw CSS vanaf hier */
-
-
 .gameboy {
     position: relative;
-    background-color: #ededed;
     height: 100vh;
     width: 100vw;
     border-radius: 4em 4em 8em 4em / 4em 4em 5em 4em;
     box-shadow:
         inset -.25em -.25em .25em rgb(102 102 102);
     display: flow-root;
+    background-color: var(--color-gb-background);
 }
 
 .omlijning {
-    background-color: #979a9c;
     height: 30em;
     width: 90%;
     max-width: 50em;
     margin: 2em auto;
     margin-bottom: 0;
+    background-color: var(--color-gb-omlijning);
     border-radius: 1em 1em 8em 1em / 1em 1em 5em 1em;
 }
 
 .scherm {
-    background-color: #89822a;
+    background-color: var(--color-background-scherm);
     height: 23em;
     width: 60%;
     max-width: 25em;
     margin: 2em auto;
+    position: relative;
+}
+
+.gbinfotekst {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: var(--color-background-scherm);
+}
+
+.gbinfotekst.toon-info {
+    display: block;
+}
+
+.gbinfotekst h3 {
+    font-family: var(--font-gb-schermtekst);
+    color: var(--color-gb-schermtekst);
+    font-size: 1em;
+    letter-spacing: 0.07em;
+    padding-top: 0.5em;
+    text-align: center;
+    font-weight: 800;
+}
+
+.gbinfotekst p {
+    font-family: var(--font-gb-schermtekst);
+    color: var(--color-gb-schermtekst);
+    font-size: 0.6em;
+    letter-spacing: 0.06em;
+    line-height: 1.5em;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    text-align: center;
+    font-weight: 300;
+}
+
+.gbinfotekst button {
+    margin-top: 1em;
+    margin-left: 1em;
+    border: var(--button-border);
+    background: var(--button-background);
+    font-family: var(--font-gb-schermtekst);
+    color: var(--color-gb-schermtekst);
+}
+
+.gbinfotekst button:hover {
+    margin-top: 1em;
+    margin-left: 1em;
+    background-color: var(--color-gb-schermtekst);
+    color: var(--color-background-scherm);
+}
+
+.gbclassic,
+.gblight,
+.gbcolor,
+.gbadvance,
+.gbadvancesp {
+    padding: var(--button-padding);
+    background: var(--button-background);
+    border: var(--button-border);
 }
 
 ul {
@@ -69,7 +174,7 @@ ul li {
 }
 
 ul li p {
-    font-family: 'Press Start 2P', cursive;
+    font-family: var(--font-gb-schermtekst);
 }
 
 ul li img {
@@ -77,6 +182,7 @@ ul li img {
     padding-top: 1em;
 }
 
+/*ANIMATIE AFBEELDINGEN*/
 
 @keyframes bounce {
 
@@ -105,15 +211,14 @@ ul li img {
 
 ul li img:hover {
     animation-name: bounce;
-    -moz-animation-name: bounce;
     cursor: pointer;
     animation-duration: 1s;
 }
 
 
 ul li h3 {
-    font-family: 'Press Start 2P', cursive;
-    color: #48524a;
+    font-family: var(--font-gb-schermtekst);
+    color: var(--color-gb-schermtekst);
     font-size: 0.5em;
     letter-spacing: 0.07em;
     margin-top: 1.25em;
@@ -122,8 +227,8 @@ ul li h3 {
 }
 
 ul li p {
-    font-family: 'Press Start 2P', cursive;
-    color: #48524a;
+    font-family: var(--font-gb-schermtekst);
+    color: var(--color-gb-schermtekst);
     font-size: 0.3em;
     letter-spacing: 0.06em;
     margin-top: 0.93em;
@@ -133,20 +238,19 @@ ul li p {
 }
 
 .gameboy h2 {
-    font-family: 'Poppins', sans-serif;
-    color: #0a3f94;
+    font-family: var(--font-gb-buttons);
     font-size: 1em;
     width: 90%;
     max-width: 50em;
     margin: 0 auto;
-
+    color: var(--color-nintendotext);
 }
 
 .gameboy h2 span {
     font-family: 'Open Sans', sans-serif;
     display: inline-block;
-    color: #0a3f94;
     font-size: 1.5em;
+    color: var(--color-gameboytmtext);
 }
 
 .button-wrapper {
@@ -160,35 +264,29 @@ ul li p {
 }
 
 .button-wrapper > section:nth-of-type(2) {
-    background-color: #d1d1d1;
-    height: 60px;
-    width: 120px;
+    height: 3.75em;
+    width: 7.5em;
     transform: rotate(330deg);
-    border-radius: 40px;
+    border-radius: 2.5em;
     text-align: center;
+    background-color: var(--color-background-ab-button);
 }
 
 .button-wrapper > section:nth-of-type(2) button {
-    height: 50px;
-    width: 50px;
+    height: 3.8em;
+    width: 3.8em;
     border-radius: 50%;
-    background-color: #aa3866;
     border-style: none;
     margin: 0.34em auto;
-    /*    box-shadow: 5px 6px 2px -3px rgba(109,109,109,0.58);*/
+    background-color: var(--color-ab-button);
 }
 
 .button-wrapper p {
-    font-family: 'Poppins', sans-serif;
-    color: #0a3f94;
+    font-family: var(--font-gb-buttons);
     font-size: 1em;
     margin-top: 4.2em;
+    color: var(--color-ab-buttontext);
 }
-
-a {
-    text-decoration: none;
-}
-
 
 .button-wrapper button:hover {
     box-shadow: inset -8px -9px 11px -4px rgba(0, 0, 0, 0.41);
@@ -205,81 +303,63 @@ a {
     background-color: none;
     width: 100%;
     text-align: center;
+
 }
 
 .button-wrapper > section:nth-of-type(3) button {
-    height: 15px;
-    width: 50px;
-    border-radius: 30px;
-    background-color: #b3b3b3;
+    height: 1.2em;
+    width: 4em;
+    border-radius: 1.9em;
     border-style: none;
+    background-color: var(--color-select-start-button);
+    transform: rotate(340deg);
+    margin-left: 0.6em;
+    border-style: solid;
+    border-color: var(--color-ss-border);
+    border-width: medium;
 }
 
 .button-wrapper h3 {
-    font-family: 'Poppins', sans-serif;
-    color: #0a3f94;
-    font-size: 1em;
-    margin-top: 1.5em;
-    text-align: left;
+    font-family: var(--font-gb-buttons);
+    color: var(--color-ss-buttontext);
+    font-size: 0.8em;
+    margin-top: 1.3em;
 }
-
-
-
-
-/*
-.button-wrapper > section:not(:nth-of-type(3)) {
-    flex: 1;
-}
-*/
 
 .pijltjes {
     background: none;
-    height: 100px;
+    height: 6.25em;
     position: relative;
-    width: 100px;
+    width: 6.25em;
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
     grid-template-rows: 33.3% 33.3% 33.3%;
 }
 
 .pijltjes::after {
-    background: #474747;
     content: "";
-    height: 30px;
+    height: 1.8em;
     left: 0;
     position: absolute;
-    top: 35px;
-    width: 100px;
+    top: 2.2em;
+    width: 6.25em;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
-    /*
-        inset -8px -9px 11px -4px rgba(0, 0, 0, 0.41),
-        inset 5px 3px 4px -5px #FFFFFF;
-*/
     opacity: 98%;
+    background-color: var(--color-pijltjesbuttons);
 }
-
-
-
 
 .pijltjes::before {
-    background: #474747;
     content: "";
-    height: 100px;
-    left: 35px;
+    height: 6.25em;
+    left: 2.2em;
     position: absolute;
     top: 0;
-    width: 30px;
+    width: 1.8em;
     border-radius: 0.5em 0.5em 0.5em 0.5em;
-    box-shadow:
-        /*
-        inset -8px -9px 11px -4px rgba(0, 0, 0, 0.41),
-        inset -2px 6px 4px -5px #FFFFFF;
-*/
-        opacity: 90%;
+    opacity: 98%;
+    background-color: var(--color-pijltjesbuttons);
 }
-
-
 
 .pijltjes button {
     position: relative;
